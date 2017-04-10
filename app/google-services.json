@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "578270330572",
+    "firebase_url": "https://climate-hero.firebaseio.com",
+    "project_id": "climate-hero",
+    "storage_bucket": "climate-hero.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578270330572:android:b119252c2403204a",
+        "android_client_info": {
+          "package_name": "com.example.android.climatehero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578270330572-qsbtolghk5kpo879l5sis3qktkfbivtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBemElUq34-czFVIyH3tcFFQBulnIMq46Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
