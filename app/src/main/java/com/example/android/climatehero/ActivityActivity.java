@@ -1,5 +1,6 @@
 package com.example.android.climatehero;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -12,36 +13,37 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LogInActivity extends AppCompatActivity {
+public class ActivityActivity extends AppCompatActivity {
 
-    private EditText emailEditText;
-    private EditText passwordEditText;
+    private EditText emailText;
+    private EditText passwordText;
 
-    private FirebaseAuth auth = FirebaseAuth.getInstance();
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in);
+        setContentView(R.layout.activity_activity);
 
-        emailEditText = (EditText) findViewById(R.id.edit_text_email);
-        passwordEditText = (EditText) findViewById(R.id.edit_text_password);
-
+        emailText = (EditText) findViewById(R.id.email);
+        passwordText = (EditText) findViewById(R.id.password);
     }
 
     public void logIn(View view) {
-        String email = emailEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        String email = emailText.getText().toString();
+        String password = passwordText.getText().toString();
 
-        auth.signInWithEmailAndPassword(email, password)
+        mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
-                            Toast.makeText(LogInActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ActivityActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(LogInActivity.this, task.getResult().getUser().getEmail() + " logged in successful",
+                            Toast.makeText(ActivityActivity.this, task.getResult().getUser().getEmail() + " logged in successful",
                                     Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(ActivityActivity.this, SplashActivity.class));
                             finish();
                         }
 
@@ -50,22 +52,24 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public void signUp(View view) {
-        String email = emailEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        String email = emailText.getText().toString();
+        String password = passwordText.getText().toString();
 
-        auth.createUserWithEmailAndPassword(email, password)
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
-                            Toast.makeText(LogInActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ActivityActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(LogInActivity.this, task.getResult().getUser().getEmail() + " signed up successful",
+                            Toast.makeText(ActivityActivity.this, task.getResult().getUser().getEmail() + " signed up successful",
                                     Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(ActivityActivity.this, SplashActivity.class));
                             finish();
                         }
 
                     }
                 });
     }
+
 }
