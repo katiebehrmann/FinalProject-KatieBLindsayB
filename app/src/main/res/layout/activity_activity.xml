@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#047498"
     tools:context="com.example.android.climatehero.ActivityActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="climateHero"
+        android:textSize="64dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="verdana"
+        android:layout_marginTop="1dp"
+        android:textColor="#FFFF" />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:src="@drawable/nature"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
         android:hint="Email"
         android:id="@+id/email"
         android:inputType="textEmailAddress" />
@@ -16,19 +41,33 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="390dp"
         android:hint="password"
         android:id="@+id/password"
         android:inputType="textPassword" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log In"
-        android:onClick="logIn" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign up"
-        android:onClick="signUp" />
-</LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:onClick="logIn"
+            android:layout_marginTop="430dp"
+            android:background="#FFFF" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:layout_marginTop="430dp"
+            android:layout_marginLeft="270dp"
+            android:onClick="signUp"
+            android:background="#FFFF" />
+
+    </RelativeLayout>
+</RelativeLayout>

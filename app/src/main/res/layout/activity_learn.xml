@@ -1,42 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/activity_learn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#047498"
     tools:context="com.example.android.climatehero.Learn">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fossil Fuels"
-        android:onClick="fossilFuels" />
+        android:text="Learn more about climate change"
+        android:textSize="35dp"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        android:textAlignment="center" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Deforestation"
-        android:onClick="deforestation" />
+        android:layout_marginTop="100dp"
+        android:text="Fossil fuels"
+        android:onClick="fossilFuels"
+        android:textSize="20dp"
+        android:background="#E0F1F7" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Recycling"
-        android:onClick="recycling" />
+        android:onClick="deforestation"
+        android:layout_marginTop="170dp"
+        android:text="deforestation"
+        android:textSize="20dp"
+        android:background="#C9ECF8" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:onClick="recycling"
+        android:text="recycling"
+        android:textSize="20dp"
+        android:background="#B1E9FB" />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
         android:text="Food consumption"
-        android:onClick="foodConsumption" />
+        android:textSize="20dp"
+        android:onClick="foodConsumption"
+        android:background="#99DFF6" />
 
     <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:text="resource usage"
+        android:onClick="resourceUsage"
+        android:textSize="20dp"
+        android:background="#90D5EC" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resource Usage"
-        android:onClick="resourceUsage" />
-
-    <!--Create info pages for each learn more with helpful links-->
-    <!--and non-specific intents-->
-
-</LinearLayout>
+        android:src="@drawable/footer"
+        android:layout_marginTop="450dp" />
+</RelativeLayout>
