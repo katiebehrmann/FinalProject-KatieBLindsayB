@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Learn more about climate change"
+        android:text="@string/learn_more"
         android:textSize="35dp"
         android:textColor="#FFFF"
         android:textStyle="bold"
@@ -24,7 +24,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Fossil fuels"
+        android:text="@string/fossil_fuel"
         android:onClick="fossilFuels"
         android:textSize="20dp"
         android:background="#E0F1F7" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:onClick="deforestation"
         android:layout_marginTop="170dp"
-        android:text="deforestation"
+        android:text="@string/deforest"
         android:textSize="20dp"
         android:background="#C9ECF8" />
 
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
         android:onClick="recycling"
-        android:text="recycling"
+        android:text="@string/recycling"
         android:textSize="20dp"
         android:background="#B1E9FB" />
 
@@ -51,7 +51,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="310dp"
-        android:text="Food consumption"
+        android:text="@string/food_consumption"
         android:textSize="20dp"
         android:onClick="foodConsumption"
         android:background="#99DFF6" />
@@ -60,7 +60,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="380dp"
-        android:text="resource usage"
+        android:text="@string/resource"
         android:onClick="resourceUsage"
         android:textSize="20dp"
         android:background="#90D5EC" />

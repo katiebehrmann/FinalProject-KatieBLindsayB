@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#5DBCDB"
-    tools:context="com.example.android.climatehero.TrackLightbulbs">
+    tools:context="com.example.android.climatehero.TrackDiet">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,20 +17,20 @@
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:fontFamily="Verdana"
-        android:gravity="center"
         android:textSize="36dp"
-        android:text="@string/track_lightbulb" />
+        android:gravity="center"
+        android:text="How did you get to work/school today?" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="@string/some"
+        android:text="bus or train"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:textSize="18dp"
-        android:onClick="some"
+        android:onClick="publicTrans"
         android:layout_marginTop="110dp"
         android:layout_marginLeft="200dp" />
 
@@ -38,11 +38,11 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="@string/all"
+        android:text="walk or bike"
         android:textColor="#FFFF"
         android:textSize="18dp"
+        android:onClick="walkBike"
         android:textStyle="bold"
-        android:onClick="all"
         android:fontFamily="verdana"
         android:layout_marginTop="110dp" />
 
@@ -50,33 +50,33 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="@string/one"
+        android:text="car"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:textSize="18dp"
-        android:onClick="one"
+        android:onClick="car"
         android:fontFamily="verdana"
         android:layout_marginTop="275dp" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:onClick="plane"
         android:background="@drawable/blueicon"
-        android:text="@string/none"
+        android:text="plane"
         android:textSize="18dp"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:layout_marginTop="275dp"
-        android:onClick="none"
         android:layout_marginLeft="200dp" />
-
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/track_next"
-        android:onClick="trackNext"
-        android:layout_alignParentBottom="true" />
+        android:onClick="trackGoal"
+        android:layout_alignParentBottom="true"
+        android:text="Track Goal" />
+
 
 </RelativeLayout>

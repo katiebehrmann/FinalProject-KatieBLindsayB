@@ -29,7 +29,8 @@
         <activity android:name=".FossilFuels" />
         <activity android:name=".UploadImage" />
         <activity android:name=".Deforestation" />
-        <activity android:name=".Recycling"></activity>
+        <activity android:name=".Recycling" />
+        <activity android:name=".DailyTravel"></activity>
     </application>
 
 </manifest>

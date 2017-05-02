@@ -8,35 +8,30 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class TrackDiet extends AppCompatActivity {
-    private int dietScore;
+public class DailyTravel extends AppCompatActivity {
+
+    private int travelScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_track_diet);
-
-
+        setContentView(R.layout.activity_daily_travel);
     }
 
-    public void vegan(View view) {
-        dietScore = 2;
-
+    public void publicTrans(View view) {
+        travelScore = 1;
     }
 
-    public void vegetarian(View view) {
-        dietScore = 1;
-
+    public void walkBike(View view) {
+        travelScore = 2;
     }
 
-    public void omnivore(View view) {
-        dietScore = 0;
-
+    public void car(View view) {
+        travelScore = -1;
     }
 
-    public void meat(View view) {
-        dietScore = -1;
-
+    public void plane(View view) {
+        travelScore = -2;
     }
 
     @Override
@@ -49,22 +44,22 @@ public class TrackDiet extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_save:
-                Toast.makeText(this, "Back to home screen", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(this, MainActivity.class);
                 startActivity(i);
                 return true;
             case R.id.menu_delete:
-                Toast.makeText(this, "Diet deleted", Toast.LENGTH_SHORT).show();
-                dietScore = 0;
+                Toast.makeText(this, "Travel deleted", Toast.LENGTH_SHORT).show();
+                travelScore = 0;
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    public void trackNext(View view) {
+    public void backHome(View view) {
 
-        Score s = new Score(dietScore, "Food Efficiency", R.drawable.spinach);
+        Toast.makeText(this, "Travel saved", Toast.LENGTH_SHORT).show();
+        Score s = new Score(travelScore, "Travel Efficiency", R.drawable.bike);
         Intent data = new Intent();
         data.putExtra(Keys.SCORE, s);
         setResult(RESULT_OK, data);

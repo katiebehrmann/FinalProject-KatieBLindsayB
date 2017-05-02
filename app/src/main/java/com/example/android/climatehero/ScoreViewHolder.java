@@ -31,8 +31,16 @@ public class ScoreViewHolder extends RecyclerView.ViewHolder {
 
     public void bind(final Score score) {
         scoreName.setText(score.getAction());
-        scoreScore.setText("Climate Hero points " + score.getScore());
-        scoreImage.setImageResource(R.drawable.bike);
+        scoreScore.setText("Climate Hero points: " + score.getScore());
+        if (score.getAction().equals("Food Efficiency")) {
+            scoreImage.setImageResource(R.drawable.spinach);
+        }
+        if (score.getAction().equals("Light bulb Efficiency")) {
+            scoreImage.setImageResource(R.drawable.lightbulb);
+        }
+        if (score.getAction().equals("Travel Efficiency")) {
+            scoreImage.setImageResource(R.drawable.bike);
+        }
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

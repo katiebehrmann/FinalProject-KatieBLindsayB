@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:fontFamily="verdana"
-        android:text="climateHero"
+        android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="#FFFF"
         android:textSize="55dp"
@@ -42,7 +42,7 @@
             android:background="#FF5722"
             android:fontFamily="verdana"
             android:onClick="track"
-            android:text="Track"
+            android:text="@string/track"
             android:textSize="15dp"
             android:textStyle="bold" />
 
@@ -55,7 +55,7 @@
             android:background="#FF5722"
             android:fontFamily="verdana"
             android:onClick="logOut"
-            android:text="Log Out"
+            android:text="@string/Log_out"
             android:textSize="15dp"
             android:textStyle="bold" />
 
@@ -63,49 +63,49 @@
             android:id="@+id/learn"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
             android:layout_below="@+id/track"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="20dp"
-            android:layout_alignParentLeft="true"
             android:background="@drawable/treeicon"
             android:fontFamily="verdana"
-            android:text="Learn"
             android:onClick="learn"
+            android:text="@string/learn"
             android:textColor="#FFFF"
             android:textSize="15dp"
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/upload"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
             android:layout_below="@+id/track"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/goal2"
             android:fontFamily="verdana"
-            android:text="upload images"
-            android:id="@+id/upload"
+            android:onClick="uploadImage"
+            android:text="@string/take_pic"
             android:textColor="#FFFF"
-            android:layout_alignParentRight="true"
             android:textSize="15dp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/call"
-            android:onClick="act"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_below="@id/track"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="20dp"
-            android:layout_centerHorizontal="true"
             android:background="@drawable/call2"
             android:fontFamily="verdana"
-            android:text="Act!"
+            android:onClick="act"
+            android:text="@string/act"
             android:textSize="15dp"
             android:textStyle="bold" />
     </RelativeLayout>
-
 
 </LinearLayout>

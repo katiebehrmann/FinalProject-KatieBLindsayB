@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:text="Fossil Fuels"
+        android:text="@string/fossil_fuel"
         android:textSize="36dp"
         android:textStyle="bold"
         android:textColor="#FFFF" />
@@ -52,7 +52,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:layout_height="wrap_content"
-        android:text="Back to Home"
+        android:text="@string/back_home"
         android:textColor="#FFFFFF"
         android:onClick="backHome"
         android:background="#D4674E" />

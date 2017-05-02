@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Save Score"
+        android:title="Home"
         android:id="@+id/menu_save"
         app:showAsAction="always" />
     <item

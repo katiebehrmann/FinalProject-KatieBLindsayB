@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference scoreReference = FirebaseDatabase.getInstance().getReference(auth.getCurrentUser().getUid() + " /scores");
     private RecyclerView recyclerview;
     private ScoreAdapter scoreAdapter;
-//    private DatabaseReference scoreReference = FirebaseDatabase.getInstance().getReference("scores");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
     public void learn(View view) {
         Intent intent = new Intent(this, Learn.class);
         startActivity(intent);
+    }
+
+    public void uploadImage(View view) {
+        Intent i = new Intent(this, UploadImage.class);
+        startActivity(i);
     }
 
     public void logOut(View view) {

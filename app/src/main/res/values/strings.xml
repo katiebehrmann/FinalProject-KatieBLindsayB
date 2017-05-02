@@ -1,5 +1,27 @@
 <resources>
-    <string name="app_name">Climate Hero!</string>
+    <string name="app_name">climateHero</string>
+    <string name="Log_in">Log In</string>
+    <string name="Log_out">Log Out</string>
+    <string name="email">Email</string>
+    <string name="learn">Learn</string>
+    <string name="take_pic">Take a Pic</string>
+    <string name="act">Act!</string>
+    <string name="track_lightbulb">Are your light bulbs energy efficient?</string>
+    <string name="learn_more">Learn more about climate change</string>
+    <string name="fossil_fuel">Fossil Fuels</string>
+    <string name="deforest">Deforestation</string>
+    <string name="recycling">Recycling</string>
+    <string name="food_consumption">Food Consumption</string>
+    <string name="resource">Resource Usage</string>
+    <string name="track">Track</string>
+    <string name="track_next">Track Next Goal</string>
+    <string name="back_home">Back to Home</string>
+    <string name="all">All of Them</string>
+    <string name="some">Some of Them</string>
+    <string name="one">One of Them</string>
+    <string name="none">None of Them</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
     <string name="fossil_fuels">"If you want to reduce your carbon footprint, one of the most significant ways you can do so is by limiting your usage of fossil fuels. On Earth, human activities are changing the natural greenhouse. Over the last century the burning of fossil fuels like coal and oil has increased the concentration of atmospheric carbon dioxide (CO2). This happens because the coal or oil burning process combines carbon with oxygen in the air to make CO2. To a lesser extent, the clearing of land for agriculture, industry, and other human activities has increased concentrations of greenhouse gases. In its Fifth Assessment Report, the Intergovernmental Panel on Climate Change, a group of 1,300 independent scientific experts from countries all over the world under the auspices of the United Nations, concluded theres a more than 95 percent probability that human activities over the past 50 years have warmed our planet. The industrial activities that our modern civilization depends upon have raised atmospheric carbon dioxide levels from 280 parts per million to 400 parts per million in the last 150 years. The panel also concluded there's a better than 95 percent probability that human-produced greenhouse gases such as carbon dioxide, methane and nitrous oxide have caused much of the observed increase in Earths temperatures over the past 50 years."</string>
     <string name="deforestation">"Forests are vital for human and animal lives as they are home to millions of species, prevent soil erosion, play a crucial role in water cycle by returning water vapor back into the atmosphere, absorb greenhouse gases that fuel global warming, keep soil moist by blocking the sun, produce oxygen and absorb carbon dioxide. Forests cover about 30% of the world’s land area and large patches of forests are lost every year due to deforestation. If current rate of deforestation continue, there will be no more rainforests in 100 years. It is estimated that due to cutting and burning of forests every year, more than 1.5 billion tons of carbon dioxide are released into the atmosphere."</string>
 
