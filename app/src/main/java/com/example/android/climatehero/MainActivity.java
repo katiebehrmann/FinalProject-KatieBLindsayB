@@ -16,10 +16,10 @@ import java.util.UUID;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth auth = FirebaseAuth.getInstance();
-    //    private DatabaseReference peopleReference = FirebaseDatabase.getInstance().getReference(auth.getCurrentUser().getUid() + "/people");
+    private DatabaseReference scoreReference = FirebaseDatabase.getInstance().getReference(auth.getCurrentUser().getUid() + " /scores");
     private RecyclerView recyclerview;
     private ScoreAdapter scoreAdapter;
-    private DatabaseReference scoreReference = FirebaseDatabase.getInstance().getReference("scores");
+//    private DatabaseReference scoreReference = FirebaseDatabase.getInstance().getReference("scores");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +47,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void call(View view) {
+    public void act(View view) {
         Intent intent = new Intent(this, CallRep.class);
         startActivity(intent);
     }
 
     public void learn(View view) {
         Intent intent = new Intent(this, Learn.class);
+        startActivity(intent);
+    }
+
+    public void logOut(View view) {
+        auth.signOut();
+        Intent intent = new Intent(this, ActivityActivity.class);
         startActivity(intent);
     }
 

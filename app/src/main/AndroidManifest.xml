@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".ChooseGoalsScreen" />
         <activity android:name=".FirstLogIn" />
@@ -25,7 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TrackDiet"></activity>
+        <activity android:name=".TrackDiet" />
+        <activity android:name=".FossilFuels" />
+        <activity android:name=".UploadImage" />
+        <activity android:name=".Deforestation" />
+        <activity android:name=".Recycling"></activity>
     </application>
 
 </manifest>

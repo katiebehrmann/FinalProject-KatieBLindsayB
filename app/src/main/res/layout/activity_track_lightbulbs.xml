@@ -73,9 +73,9 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:onClick="selectImage"
+        android:onClick="backHome"
         android:layout_alignParentBottom="true"
-        android:text="Select Image" />
+        android:text="Back to Home" />
 
     <Button
         android:layout_width="150dp"

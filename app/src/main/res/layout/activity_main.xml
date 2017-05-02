@@ -2,22 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="#047498"
+    android:orientation="vertical"
     tools:context="com.example.android.climatehero.MainActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/title"
+        android:layout_marginTop="1dp"
+        android:fontFamily="verdana"
         android:text="climateHero"
         android:textAlignment="center"
+        android:textColor="#FFFF"
         android:textSize="55dp"
-        android:textStyle="bold"
-        android:fontFamily="verdana"
-        android:layout_marginTop="1dp"
-        android:textColor="#FFFF" />
+        android:textStyle="bold" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycle_view"
@@ -33,59 +33,78 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Track"
-            android:onClick="track"
             android:id="@+id/track"
-            android:fontFamily="verdana"
-            android:textStyle="bold"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_margin="8dp"
-            android:textSize="15dp"
             android:layout_marginBottom="4dp"
-            android:background="#FF5722" />
+            android:background="#FF5722"
+            android:fontFamily="verdana"
+            android:onClick="track"
+            android:text="Track"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="Learn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="#FF5722"
+            android:fontFamily="verdana"
+            android:onClick="logOut"
+            android:text="Log Out"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/learn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_below="@+id/track"
-            android:textColor="#FFFF"
-            android:textStyle="bold"
-            android:fontFamily="verdana"
-            android:textSize="15dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/treeicon" />
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/treeicon"
+            android:fontFamily="verdana"
+            android:text="Learn"
+            android:onClick="learn"
+            android:textColor="#FFFF"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="100dp"
-            android:layout_below="@+id/track"
             android:layout_height="100dp"
-            android:background="@drawable/goal2"
-            android:textColor="#FFFF"
-            android:textStyle="bold"
-            android:layout_toRightOf="@+id/call"
-            android:textSize="15dp"
-            android:fontFamily="verdana"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/track"
             android:layout_marginBottom="8dp"
-            android:text="goal set"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/goal2"
+            android:fontFamily="verdana"
+            android:text="upload images"
+            android:id="@+id/upload"
+            android:textColor="#FFFF"
+            android:layout_alignParentRight="true"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <Button
+            android:id="@+id/call"
+            android:onClick="act"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_below="@id/track"
-            android:textStyle="bold"
-            android:textSize="15dp"
             android:layout_marginBottom="8dp"
-            android:id="@+id/call"
-            android:layout_toRightOf="@+id/learn"
-            android:fontFamily="verdana"
-            android:background="@drawable/call2"
             android:layout_marginLeft="20dp"
-            android:text="call" />
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/call2"
+            android:fontFamily="verdana"
+            android:text="Act!"
+            android:textSize="15dp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 

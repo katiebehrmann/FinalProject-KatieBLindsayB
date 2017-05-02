@@ -23,18 +23,22 @@ public class TrackDiet extends AppCompatActivity {
 
     public void vegan(View view) {
         dietScore = 2;
+
     }
 
     public void vegetarian(View view) {
         dietScore = 1;
+
     }
 
     public void omnivore(View view) {
         dietScore = 0;
+
     }
 
     public void meat(View view) {
         dietScore = -1;
+
     }
 
     @Override
@@ -48,21 +52,23 @@ public class TrackDiet extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menu_save:
                 Toast.makeText(this, "Diet saved", Toast.LENGTH_SHORT).show();
-
-                Score s = new Score(dietScore, "Food Efficiency", image.getId());
+                Score s = new Score(dietScore, "Food Efficiency", R.drawable.spinach);
                 Intent data = new Intent();
                 data.putExtra(Keys.SCORE, s);
                 setResult(RESULT_OK, data);
                 finish();
-
                 return true;
             case R.id.menu_delete:
                 Toast.makeText(this, "Diet deleted", Toast.LENGTH_SHORT).show();
                 dietScore = 0;
-
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void backHome(View view) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 }

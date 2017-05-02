@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/card_view_action"
             android:text="Rode my bike"
-            android:textColor="0"
+            android:textColor="#000000"
             android:textSize="30sp" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/card_view_score"
             android:text="Points: 8"
-            android:textColor="0"
+            android:textColor="#000000"
             android:layout_below="@+id/card_view_action"
             android:textSize="30sp" />
 

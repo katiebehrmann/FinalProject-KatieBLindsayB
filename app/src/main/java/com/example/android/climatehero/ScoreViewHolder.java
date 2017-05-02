@@ -32,7 +32,7 @@ public class ScoreViewHolder extends RecyclerView.ViewHolder {
     public void bind(final Score score) {
         scoreName.setText(score.getAction());
         scoreScore.setText("Climate Hero points " + score.getScore());
-        scoreImage.setImageResource(score.getPhotoID());
+        scoreImage.setImageResource(R.drawable.bike);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
