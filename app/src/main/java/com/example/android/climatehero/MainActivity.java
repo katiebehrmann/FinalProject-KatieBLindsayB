@@ -11,8 +11,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.UUID;
-
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -34,17 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void track(View view) {
         Intent intent = new Intent(this, TrackLightbulbs.class);
-        startActivityForResult(intent, 1);
+        startActivity(intent);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 1 && resultCode == RESULT_OK) {
-            String id = UUID.randomUUID().toString();
-            Score s = (Score) data.getSerializableExtra(Keys.SCORE);
-            scoreReference.child(id).setValue(s);
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (requestCode == 1 && resultCode == RESULT_OK) {
+//            String id = UUID.randomUUID().toString();
+//            Score s = (Score) data.getSerializableExtra(Keys.SCORE);
+//            scoreReference.child(id).setValue(s);
+//        }
+//    }
 
     public void act(View view) {
         Intent intent = new Intent(this, CallRep.class);
@@ -63,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void logOut(View view) {
         auth.signOut();
-        Intent intent = new Intent(this, ActivityActivity.class);
-        startActivity(intent);
     }
 
 }

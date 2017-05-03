@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Héroe del clima</string>
+    <string name="Log_in">Iniciar sesión</string>
+    <string name="Log_out">Cerrar sesión</string>
+    <string name="email">Email</string>
+    <string name="learn"> Aprender</string>
+    <string name="take_pic">Toma una foto</string>
+    <string name="act">Acto!</string>
+    <string name="track_lightbulb">¿Son sus bombillas eficientes energéticamente?</string>
+    <string name="learn_more">Learn more about climate change</string>
+    <string name="fossil_fuel">Fossil Más información sobre el cambio climático</string>
+    <string name="deforest"> Deforestación</string>
+    <string name="recycling"> Reciclaje</string>
+    <string name="food_consumption">Consumo de comida</string>
+    <string name="resource">El uso de recursos</string>
+    <string name="track">Pista</string>
+    <string name="track_next">Seguir el siguiente objetivo</string>
+    <string name="back_home">De vuelta a casa</string>
+    <string name="all">Todos ellos</string>
+    <string name="some"> Algunos</string>
+    <string name="one">Uno de ellos</string>
+    <string name="none">Ninguno de ellos</string>
+    <string name="password">Contraseña</string>
+    <string name="sign_up">Regístrate</string>
+    <string name="fossil_fuels">"Si desea reducir su huella de carbono, una de las maneras más significativas de hacerlo es limitar su uso de combustibles fósiles. En la Tierra, las actividades humanas están cambiando el invernadero natural. Durante el siglo pasado la quema de combustibles fósiles como el carbón y el petróleo ha aumentado la concentración de dióxido de carbono (CO2) atmosférico. Esto sucede porque el carbón o el proceso de combustión de aceite combina carbono con oxígeno en el aire para hacer CO2. En menor medida, el desbroce de tierras para la agricultura, la industria y otras actividades humanas ha aumentado las concentraciones de gases de efecto invernadero. En su quinto informe de evaluación, el Grupo Intergubernamental de Expertos sobre el Cambio Climático, un grupo de 1.300 expertos científicos independientes de países de todo el mundo bajo los auspicios de las Naciones Unidas, concluyó que hay más del 95 por ciento de probabilidades de que las actividades humanas durante los últimos 50 años Han calentado nuestro planeta. Las actividades industriales de las que depende nuestra civilización moderna han elevado los niveles de dióxido de carbono atmosférico de 280 partes por millón a 400 partes por millón en los últimos 150 años. El panel también concluyó que hay una probabilidad mejor que el 95 por ciento de que los gases de efecto invernadero producidos por humanos tales como dióxido de carbono, metano y óxido nitroso han causado gran parte del aumento observado en las temperaturas de la Tierra durante los últimos 50 años."</string>
+    <string name="deforestation">"Los bosques son vitales para la vida humana y animal, ya que albergan millones de especies, evitan la erosión del suelo, desempeñan un papel crucial en el ciclo del agua devolviendo el vapor de agua a la atmósfera, absorbiendo los gases de efecto invernadero que alimentan el calentamiento global. El sol, producen oxígeno y absorben dióxido de carbono. Los bosques cubren alrededor del 30% de la superficie terrestre del mundo y grandes manchas de bosques se pierden cada año debido a la deforestación. Si la tasa actual de deforestación continúa, no habrá más selvas tropicales en 100 años. Se estima que debido al corte y la quema de bosques cada año, más de 1.500 millones de toneladas de dióxido de carbono son liberados a la atmósfera"</string>
+</resources>

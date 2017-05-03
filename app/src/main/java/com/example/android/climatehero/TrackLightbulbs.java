@@ -8,18 +8,26 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.UUID;
 
 public class TrackLightbulbs extends AppCompatActivity {
 
     private int lightbulbScore;
-    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
+    private DatabaseReference scoreReference = FirebaseDatabase.getInstance().getReference(auth.getCurrentUser().getUid() + " /scores");
+    private ScoreAdapter scoreAdapter;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_lightbulbs);
+        scoreAdapter = new ScoreAdapter(scoreReference);
     }
 
     @Override
@@ -66,10 +74,8 @@ public class TrackLightbulbs extends AppCompatActivity {
 
     public void trackNext(View view) {
         Score s = new Score(lightbulbScore, "Light bulb Efficiency", R.drawable.lightbulb);
-        Intent data = new Intent();
-        data.putExtra(Keys.SCORE, s);
-        setResult(RESULT_OK, data);
-        finish();
+        String id = UUID.randomUUID().toString();
+        scoreReference.child(id).setValue(s);
 
         Intent i = new Intent(this, TrackDiet.class);
         startActivity(i);

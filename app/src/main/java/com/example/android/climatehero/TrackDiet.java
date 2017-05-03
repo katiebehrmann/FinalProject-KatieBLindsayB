@@ -8,35 +8,39 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.UUID;
+
 public class TrackDiet extends AppCompatActivity {
     private int dietScore;
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
+    private DatabaseReference scoreReference = FirebaseDatabase.getInstance().getReference(auth.getCurrentUser().getUid() + " /scores");
+    private ScoreAdapter scoreAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_diet);
-
-
+        scoreAdapter = new ScoreAdapter(scoreReference);
     }
 
     public void vegan(View view) {
         dietScore = 2;
-
     }
 
     public void vegetarian(View view) {
         dietScore = 1;
-
     }
 
     public void omnivore(View view) {
         dietScore = 0;
-
     }
 
     public void meat(View view) {
         dietScore = -1;
-
     }
 
     @Override
@@ -65,10 +69,10 @@ public class TrackDiet extends AppCompatActivity {
     public void trackNext(View view) {
 
         Score s = new Score(dietScore, "Food Efficiency", R.drawable.spinach);
-        Intent data = new Intent();
-        data.putExtra(Keys.SCORE, s);
-        setResult(RESULT_OK, data);
-        finish();
+        String id = UUID.randomUUID().toString();
+        scoreReference.child(id).setValue(s);
 
+        Intent i = new Intent(this, DailyTravel.class);
+        startActivity(i);
     }
 }
