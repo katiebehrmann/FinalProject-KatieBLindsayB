@@ -21,20 +21,20 @@
         android:textSize="36dp"
         android:text="@string/track_lightbulb" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="@string/some"
+        android:text="Some of  Them"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:textSize="18dp"
-        android:onClick="some"
+        android:id="@+id/some"
         android:layout_marginTop="110dp"
         android:layout_marginLeft="200dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
@@ -42,11 +42,11 @@
         android:textColor="#FFFF"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:onClick="all"
+        android:id="@+id/all"
         android:fontFamily="verdana"
         android:layout_marginTop="110dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
@@ -54,21 +54,21 @@
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:textSize="18dp"
-        android:onClick="one"
+        android:id="@+id/one"
         android:fontFamily="verdana"
         android:layout_marginTop="275dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="@string/none"
+        android:text="None of  Them"
         android:textSize="18dp"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:layout_marginTop="275dp"
-        android:onClick="none"
+        android:id="@+id/none"
         android:layout_marginLeft="200dp" />
 
 

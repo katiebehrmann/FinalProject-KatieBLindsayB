@@ -21,49 +21,49 @@
         android:gravity="center"
         android:text="What did you eat today?" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
+        android:id="@+id/vegetarian"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="vegetarian"
+        android:text="Vegetarian"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:textSize="18dp"
-        android:onClick="vegan"
         android:layout_marginTop="110dp"
         android:layout_marginLeft="200dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
+        android:id="@+id/local"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="local grown food"
+        android:text="Local grown food"
         android:textColor="#FFFF"
         android:textSize="18dp"
-        android:onClick="vegetarian"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:layout_marginTop="110dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
+        android:id="@+id/chicken"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="Chicken and Fish Based"
+        android:text="Chicken and fish based"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:textSize="18dp"
-        android:onClick="omnivore"
         android:fontFamily="verdana"
         android:layout_marginTop="275dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:onClick="meat"
+        android:id="@+id/meat"
         android:background="@drawable/blueicon"
-        android:text="Red Meat  Based"
+        android:text="Red meat  based"
         android:textSize="18dp"
         android:textColor="#FFFF"
         android:textStyle="bold"

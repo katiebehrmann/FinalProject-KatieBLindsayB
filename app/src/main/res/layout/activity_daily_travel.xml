@@ -21,49 +21,49 @@
         android:gravity="center"
         android:text="How did you get to work/school today?" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="bus or train"
+        android:text="Bus or train"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:textSize="18dp"
-        android:onClick="publicTrans"
+        android:id="@+id/publicTrans"
         android:layout_marginTop="110dp"
         android:layout_marginLeft="200dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="walk or bike"
+        android:text="Walk or bike"
         android:textColor="#FFFF"
         android:textSize="18dp"
-        android:onClick="walkBike"
+        android:id="@+id/walkBike"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:layout_marginTop="110dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/blueicon"
-        android:text="car"
+        android:text="Car"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:textSize="18dp"
-        android:onClick="car"
+        android:id="@+id/car"
         android:fontFamily="verdana"
         android:layout_marginTop="275dp" />
 
-    <Button
+    <CheckBox
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:onClick="plane"
+        android:id="@+id/plane_ride"
         android:background="@drawable/blueicon"
-        android:text="plane"
+        android:text="Plane"
         android:textSize="18dp"
         android:textColor="#FFFF"
         android:textStyle="bold"

@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.climatehero.CallRep">
-    <!---->
-    <!--find way to import bills and news/keep folks updated. Use script and-->
-    <!--nonspecific intent for calling reps.-->
+    android:background="#047498">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Act Out!"
+        android:textColor="#FFFF"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/megaphone2"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:textColor="#FFFF"
+        android:text="There are many ways to get involved to help support the environment. Staying informed on proposed policy and contacting your legislators makes a huge impact! Make your voice heard." />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textStyle="bold"
+        android:textColor="#FFFF"
+        android:textSize="20dp"
+        android:text="Send an email to your Congressperson below!" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#FFFF"
+            android:onClick="actNow"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="ACT NOW" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#FFFF"
+            android:layout_margin="8dp"
+            android:onClick="backHome"
+            android:layout_weight="1"
+            android:text="Back to Home" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

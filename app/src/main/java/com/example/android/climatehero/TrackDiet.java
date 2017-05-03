@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,29 +20,41 @@ public class TrackDiet extends AppCompatActivity {
     private FirebaseAuth auth = FirebaseAuth.getInstance();
     private DatabaseReference scoreReference = FirebaseDatabase.getInstance().getReference(auth.getCurrentUser().getUid() + " /scores");
     private ScoreAdapter scoreAdapter;
+    private CheckBox local;
+    private CheckBox vegetarian;
+    private CheckBox chicken;
+    private CheckBox meat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_diet);
         scoreAdapter = new ScoreAdapter(scoreReference);
-    }
 
-    public void vegan(View view) {
-        dietScore = 2;
-    }
+        local = (CheckBox) findViewById(R.id.local);
+        vegetarian = (CheckBox) findViewById(R.id.vegetarian);
+        chicken = (CheckBox) findViewById(R.id.chicken);
+        meat = (CheckBox) findViewById(R.id.meat);
 
-    public void vegetarian(View view) {
-        dietScore = 1;
-    }
-
-    public void omnivore(View view) {
         dietScore = 0;
     }
 
-    public void meat(View view) {
-        dietScore = -1;
-    }
+
+//    public void vegan(View view) {
+//        dietScore = 2;
+//    }
+//
+//    public void vegetarian(View view) {
+//        dietScore = 1;
+//    }
+//
+//    public void omnivore(View view) {
+//        dietScore = 0;
+//    }
+//
+//    public void meat(View view) {
+//        dietScore = -1;
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,6 +72,10 @@ public class TrackDiet extends AppCompatActivity {
                 return true;
             case R.id.menu_delete:
                 Toast.makeText(this, "Diet deleted", Toast.LENGTH_SHORT).show();
+                local.setChecked(false);
+                meat.setChecked(false);
+                vegetarian.setChecked(false);
+                local.setChecked(false);
                 dietScore = 0;
                 return true;
             default:
@@ -67,6 +84,21 @@ public class TrackDiet extends AppCompatActivity {
     }
 
     public void trackNext(View view) {
+
+        if (local.isChecked()) {
+            dietScore = dietScore + 1;
+        }
+        if (vegetarian.isChecked()) {
+            dietScore = dietScore + 2;
+        }
+
+        if (chicken.isChecked()) {
+            dietScore = dietScore - 1;
+        }
+
+        if (meat.isChecked()) {
+            dietScore = dietScore - 2;
+        }
 
         Score s = new Score(dietScore, "Food Efficiency", R.drawable.spinach);
         String id = UUID.randomUUID().toString();
