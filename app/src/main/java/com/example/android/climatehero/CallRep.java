@@ -48,4 +48,9 @@ public class CallRep extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    public void backHome(View view) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+    }
 }

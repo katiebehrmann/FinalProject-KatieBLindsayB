@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:onClick="backHome"
         android:layout_alignParentBottom="true"
-        android:text="@string/track_next" />
+        android:text="See Climate Scores" />
 
 
 </RelativeLayout>

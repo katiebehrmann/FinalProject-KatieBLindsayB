@@ -1,12 +1,16 @@
 package com.example.android.climatehero;
 
 import android.content.Context;
+import android.icu.util.Calendar;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by katie on 4/25/17.
@@ -19,6 +23,7 @@ public class ScoreViewHolder extends RecyclerView.ViewHolder {
     private TextView scoreName;
     private ImageView scoreImage;
     private Context context;
+    private Calendar rightNow;
 
     public ScoreViewHolder(View itemView) {
         super(itemView);
@@ -30,8 +35,17 @@ public class ScoreViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(final Score score) {
-        scoreName.setText(score.getAction());
-        scoreScore.setText("Climate Hero points: " + score.getScore());
+        Date cDate = new Date();
+        String fDate = new SimpleDateFormat("yyyy-MM-dd").format(cDate);
+        scoreName.setText(score.getAction() + " " + fDate);
+        if (score.getScore() > 0) {
+            scoreScore.setText("Climate Hero points: " + score.getScore() + "\n" +
+                    "Congrats, Climate Hero!");
+        } else {
+            scoreScore.setText("Climate Hero points: " + score.getScore() + "\n" +
+                    "YOU CAN DO BETTER!");
+        }
+
         if (score.getAction().equals("Food Efficiency")) {
             scoreImage.setImageResource(R.drawable.spinach);
         }
@@ -44,7 +58,7 @@ public class ScoreViewHolder extends RecyclerView.ViewHolder {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Integer.parseInt(scoreScore.getText().toString()) > 0) {
+                if (score.getScore() > 0) {
                     Toast.makeText(context, "Congrats, Climate Hero!", Toast.LENGTH_SHORT).show();
                 } else
                     Toast.makeText(context, "C'mon pal!", Toast.LENGTH_SHORT).show();
