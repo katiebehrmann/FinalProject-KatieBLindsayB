@@ -67,7 +67,7 @@
             android:layout_margin="8dp"
             android:onClick="backHome"
             android:layout_weight="1"
-            android:text="Back to Home" />
+            android:text="@string/back_home" />
 
     </LinearLayout>
 
