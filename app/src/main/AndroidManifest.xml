@@ -30,7 +30,9 @@
         <activity android:name=".UploadImage" />
         <activity android:name=".Deforestation" />
         <activity android:name=".Recycling" />
-        <activity android:name=".DailyTravel"></activity>
+        <activity android:name=".DailyTravel" />
+        <activity android:name=".FoodConsumption" />
+        <activity android:name=".ResourceUsage"></activity>
     </application>
 
 </manifest>

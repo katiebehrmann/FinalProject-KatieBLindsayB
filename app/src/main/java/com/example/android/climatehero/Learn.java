@@ -29,12 +29,12 @@ public class Learn extends AppCompatActivity {
     }
 
     public void foodConsumption(View view) {
-        Intent intent = new Intent(this, FossilFuels.class);
+        Intent intent = new Intent(this, FoodConsumption.class);
         startActivity(intent);
     }
 
     public void resourceUsage(View view) {
-        Intent intent = new Intent(this, Deforestation.class);
+        Intent intent = new Intent(this, ResourceUsage.class);
         startActivity(intent);
     }
 }

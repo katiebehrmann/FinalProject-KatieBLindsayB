@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void logOut(View view) {
         auth.signOut();
+        Intent i = new Intent(this, SplashActivity.class);
+        startActivity(i);
     }
 
 }
