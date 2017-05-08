@@ -78,6 +78,7 @@
         android:text="Track next goal"
         android:layout_alignParentRight="true"
         android:onClick="trackNext"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="#FFFF" />
 
 </RelativeLayout>

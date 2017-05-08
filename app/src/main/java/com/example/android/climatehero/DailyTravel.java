@@ -42,22 +42,6 @@ public class DailyTravel extends AppCompatActivity {
         travelScore = 0;
     }
 
-//    public void publicTrans(View view) {
-//        travelScore = 1;
-//    }
-//
-//    public void walkBike(View view) {
-//        travelScore = 2;
-//    }
-//
-//    public void car(View view) {
-//        travelScore = -1;
-//    }
-//
-//    public void plane(View view) {
-//        travelScore = -2;
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_save_or_delete, menu);

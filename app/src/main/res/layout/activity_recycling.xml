@@ -38,7 +38,7 @@
                 android:textSize="15dp"
                 android:textStyle="bold"
                 android:textColor="#FFFF"
-                android:text="@string/deforestation" />
+                android:text="@string/recycling_info" />
 
         </LinearLayout>
 
