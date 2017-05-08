@@ -35,14 +35,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (requestCode == 1 && resultCode == RESULT_OK) {
-//            String id = UUID.randomUUID().toString();
-//            Score s = (Score) data.getSerializableExtra(Keys.SCORE);
-//            scoreReference.child(id).setValue(s);
-//        }
-//    }
 
     public void act(View view) {
         Intent intent = new Intent(this, CallRep.class);

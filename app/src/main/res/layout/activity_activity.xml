@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textSize="64dp"
-        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:fontFamily="verdana"
         android:layout_marginTop="1dp"
@@ -26,12 +26,12 @@
         android:layout_height="280dp"
         android:src="@drawable/nature"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="100dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="400dp"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:hint="@string/email"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:textColor="#FFFF"
         android:textStyle="bold"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="450dp"
         android:hint="@string/password"
         android:id="@+id/password"
         android:inputType="textPassword" />
@@ -57,14 +57,14 @@
             android:layout_height="wrap_content"
             android:text="@string/Log_in"
             android:onClick="logIn"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="520dp"
             android:background="#FFFF" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="520dp"
             android:layout_marginLeft="270dp"
             android:onClick="signUp"
             android:background="#FFFF" />
