@@ -9,14 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".LogInActivity" />
-        <activity android:name=".ChooseGoalsScreen" />
-        <activity android:name=".FirstLogIn" />
-        <activity android:name=".FindOutMore" />
         <activity android:name=".ActivityActivity" />
         <activity android:name=".Learn" />
         <activity android:name=".TrackLightbulbs" />
-        <activity android:name=".ShowPoints" />
         <activity android:name=".CallRep" />
         <activity android:name=".SplashActivity">
             <intent-filter>
